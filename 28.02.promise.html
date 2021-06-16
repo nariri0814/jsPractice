@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //promise 재밌는 예제
+    const getHen = () =>
+        new Promise( (resolve, reject) => {
+            setTimeout( () => resolve('🐓', 1000));
+        });
+    const getEgg = hen =>
+        new Promise( (resolve, reject) => {
+            // setTimeout( () => resolve(`${hen} => 🥚`), 1000);
+            setTimeout( () => reject(new Error(`error! ${hen} => 🥚`)), 1000);
+        });
+    const cook = egg =>
+        new Promise( (resolve, reject) => {
+            setTimeout( () => resolve(`${egg} => 🍳`),1000);
+        });
+
+    getHen()
+        // .then(hen => getEgg(hen)) 
+        .then(getEgg) //.then(getEgg) 로 줄일 수 있음 / 받아오는 value 값이 같고 하나일 경우
+        .catch(error => {
+            return '메롱';
+        })
+        // .then(egg => cook(egg))
+        .then(cook)
+        // .then(meal => console.log(meal));
+        .then(console.log)
+        .catch(console.log);
+
+</script>
+<body>
+    
+</body>
+</html>

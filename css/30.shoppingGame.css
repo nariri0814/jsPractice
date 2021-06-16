@@ -1,0 +1,36 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.h_gnb_li {
+  float: left;
+}
+.h_gnb_btn {
+  width: 20px;
+  height: 10px;
+  border-radius: 2px;
+}
+.btn_bl {
+  background: lightskyblue;
+}
+.btn_ye {
+  background: lightgoldenrodyellow;
+}
+.btn_pi {
+  background: lightpink;
+}
