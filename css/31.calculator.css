@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+:root {
+  --mark_color: orange;
+  --btn_sm_size: 70px;
+  --font-size: 18px;
+}
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background: #444;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  /* height: 600px; */
+  overflow: hidden;
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+}
+#calc_inp {
+  width: 100%;
+  height: var(--btn_sm_size);
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+  font-size: var(--font-size);
+}
+.calc_table {
+  width: 100%;
+}
+.btn {
+  height: var(--btn_sm_size);
+  margin-bottom: 5px;
+  font-size: var(--font-size);
+}
+.calc_table button:last-child {
+  margin-right: 0;
+}
+#btn_c {
+  width: calc(var(--btn_sm_size) * 3 + 15px);
+  background: indianred;
+}
+.btn_mark {
+  width: var(--btn_sm_size);
+  background: var(--mark_color);
+}
+.btn_num {
+  width: var(--btn_sm_size);
+}
+.btn_emp {
+  width: var(--btn_sm_size);
+  background: green;
+}
+.btn_eq {
+  width: calc(var(--btn_sm_size) * 2 + 8px);
+}
