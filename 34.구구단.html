@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="gugu">
+    </div>
+    <input type="text" class="answer"> 
+    <div class="result"></div>
+    <script>
+
+        while(true) {
+            const num1 = Math.floor(Math.random() * 9) + 1;
+            const num2 = Math.floor(Math.random() * 9) + 1;
+            const result = num1 * num2;
+            const tmp = true;
+
+            while(tmp) {
+
+                const anw = prompt(String(num1) + ' 곱하기 ' + String(num2) + ' 는?')
+                // document.querySelector('.gugu').innerTEXT = anw;
+
+                if(result === Number(anw)) {
+                    // document.querySelector('.result').innerTEXT= '딩동댕'
+                    tmp = false;
+                } else {
+                    // document.querySelector('.result').innerText= '딩동댕'
+                }
+            }
+        }
+    </script>
+</body>
+</html>
